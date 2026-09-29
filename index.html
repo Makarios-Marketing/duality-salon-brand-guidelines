@@ -161,14 +161,14 @@ td code{font-size:12.5px;color:var(--brass-deep)}
      so nothing can clip against the page margin */
   /* vertical breathing room from the page, side gutter from .wrap,
      so nothing touches a paper edge but backgrounds still run full bleed */
-  @page{size:A4;margin:15mm 0}
+  @page{size:A4;margin:0}
   @page cover{size:A4;margin:0}
   *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
   html,body{width:210mm}
   body{font-size:10pt;line-height:1.6}
   .wrap{max-width:none;margin:0;padding-inline:17mm}
 
-  .sect{padding-block:0 12mm;break-before:page;break-inside:auto;border-top:0}
+  .sect{padding-block:17mm 15mm;break-before:page;break-inside:auto;border-top:0}
   .grid{grid-template-columns:1fr;gap:0}
   .rail{position:static;display:flex;align-items:baseline;gap:8mm;margin-bottom:5mm;break-after:avoid;break-inside:avoid}
   .rail .num{font-size:19pt}
@@ -221,18 +221,18 @@ td code{font-size:12.5px;color:var(--brass-deep)}
   .bands{margin-top:8mm;grid-template-columns:repeat(6,1fr);break-inside:avoid;break-before:avoid}
   .bands div{height:16mm}
   .comps{margin-top:8mm}
-  .comp{grid-template-columns:42mm minmax(0,1fr);gap:8mm;padding:5mm 0}
+  .comp{grid-template-columns:42mm minmax(0,1fr);gap:8mm;padding:7mm 0}
   .comp .nm{font-size:13pt}
   .comp .ds{font-size:9pt}
 
   .team{margin-top:8mm}
-  .person{grid-template-columns:48mm minmax(0,1fr);gap:8mm;padding:6mm 0}
+  .person{grid-template-columns:48mm minmax(0,1fr);gap:8mm;padding:8mm 0}
   .person .who h3{font-size:16pt}
   .person .bio p{font-size:9.5pt}
 
   .tw{overflow:visible}
   table{min-width:0;font-size:8pt;table-layout:fixed;width:100%}
-  th,td{padding:3mm 4mm 3mm 0;word-break:break-word}
+  th,td{padding:4.5mm 4mm 4.5mm 0;word-break:break-word}
   td code{font-size:7.5pt}
 
   a{color:var(--brass-deep);text-decoration:none}
