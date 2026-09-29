@@ -157,30 +157,81 @@ td code{font-size:12.5px;color:var(--brass-deep)}
 .foot .wrap{padding-block:34px;border-top:1px solid rgba(255,255,255,.1)}
 
 @media print{
-  @page{size:A4;margin:14mm 12mm}
+  /* full-bleed paper: the gutter comes from .wrap, not @page,
+     so nothing can clip against the page margin */
+  @page{size:A4;margin:0}
   *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
-  body{font-size:10.5pt;line-height:1.55}
-  .wrap{max-width:none;padding-inline:0}
-  .sect{padding-block:14mm;break-inside:auto}
-  .cover{break-after:page}
-  .cover .wrap{padding-block:34mm 24mm}
-  .cover h1{font-size:58pt}
-  .rail{position:static;display:flex;align-items:baseline;gap:10mm;margin-bottom:6mm}
-  .rail .num{font-size:20pt}
+  html,body{width:210mm}
+  body{font-size:10pt;line-height:1.6}
+  .wrap{max-width:none;margin:0;padding-inline:17mm}
+
+  .sect{padding-block:13mm;break-inside:auto}
   .grid{grid-template-columns:1fr;gap:0}
-  h2.h2{font-size:22pt;break-after:avoid}
-  h3{break-after:avoid}
-  .lede{font-size:10.5pt;max-width:none}
+  .rail{position:static;display:flex;align-items:baseline;gap:8mm;margin-bottom:5mm;break-after:avoid}
+  .rail .num{font-size:19pt}
+  .rail .lbl{font-size:7.5pt;margin-top:0}
+
+  /* covers and page turns */
+  .cover{break-after:page;height:297mm;display:flex;align-items:center}
+  .cover .wrap{width:100%;padding-block:0}
+  .cover h1{font-size:54pt;line-height:.9}
+  .cover .sub{font-size:11pt;max-width:none;margin-top:9mm}
+  .meta{margin-top:18mm;padding-top:6mm;gap:7mm}
+  .meta b{font-size:13pt}
   .toc{break-after:page}
-  .person,.comp,.sw,.ledger>div,.pair>div,.spec,.scale div,.item{break-inside:avoid}
-  .sws{grid-template-columns:repeat(4,1fr)}
-  .sw .chip{height:26mm}
-  .pairs{grid-template-columns:repeat(2,1fr)}
-  .bands{grid-template-columns:repeat(6,1fr)}
-  .bands div{height:18mm}
-  table{min-width:0;font-size:9pt}
+  .toc a{padding:4.6mm 0}
+  .toc .t{font-size:15pt}
+  .toc .d{font-size:8.5pt}
+
+  /* headings never strand at a page foot */
+  h2.h2{font-size:21pt;line-height:1.12;break-after:avoid}
+  h3{break-after:avoid}
+  .kicker{break-after:avoid}
+  .lede{font-size:10pt;max-width:none;margin-top:4mm}
+  .note{font-size:8.5pt;max-width:none}
+
+  /* blocks that must stay whole */
+  .pair,.quote,.spec,.sws,.pairs,.bands,.person,.comp,.sw,.scale div,.ledger>div,.pair>div,table tr{break-inside:avoid}
+  .pair{margin-top:8mm}
+  .pair>div{padding:9mm}
+  .pair h3{font-size:15pt}
+  .ledger{margin-top:8mm}
+  .ledger>div{padding:8mm}
+
+  .quote p{font-size:17pt;max-width:none}
+  .sws{grid-template-columns:repeat(4,1fr);margin-top:8mm}
+  .sw .chip{height:22mm}
+  .sw .nm{font-size:13pt;margin-top:3mm}
+  .sw .us{font-size:8pt}
+  .pairs{grid-template-columns:repeat(2,1fr);margin-top:8mm}
+  .pairs div{min-height:24mm;padding:7mm}
+
+  .spec{margin-top:8mm;padding-top:7mm}
+  .ser{font-size:26pt}
+  .san{font-size:11pt}
+  .scale{margin-top:8mm}
+  .scale div{padding:3mm 0}
+  .scale .l{width:28mm;font-size:7.5pt}
+
+  .bands{margin-top:8mm}
+  .bands div{height:16mm}
+  .comps{margin-top:8mm}
+  .comp{grid-template-columns:42mm minmax(0,1fr);gap:8mm;padding:5mm 0}
+  .comp .nm{font-size:13pt}
+  .comp .ds{font-size:9pt}
+
+  .team{margin-top:8mm}
+  .person{grid-template-columns:48mm minmax(0,1fr);gap:8mm;padding:6mm 0}
+  .person .who h3{font-size:16pt}
+  .person .bio p{font-size:9.5pt}
+
   .tw{overflow:visible}
+  table{min-width:0;font-size:8pt;table-layout:fixed;width:100%}
+  th,td{padding:3mm 4mm 3mm 0;word-break:break-word}
+  td code{font-size:7.5pt}
+
   a{color:var(--brass-deep);text-decoration:none}
+  .foot .wrap{padding-block:9mm}
   .foot{break-before:avoid}
 }
 </style>
