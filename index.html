@@ -159,26 +159,28 @@ td code{font-size:12.5px;color:var(--brass-deep)}
 @media print{
   /* full-bleed paper: the gutter comes from .wrap, not @page,
      so nothing can clip against the page margin */
-  @page{size:A4;margin:0}
+  /* vertical breathing room from the page, side gutter from .wrap,
+     so nothing touches a paper edge but backgrounds still run full bleed */
+  @page{size:A4;margin:15mm 0}
+  @page cover{size:A4;margin:0}
   *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
   html,body{width:210mm}
   body{font-size:10pt;line-height:1.6}
   .wrap{max-width:none;margin:0;padding-inline:17mm}
 
-  .sect{padding-block:13mm;break-inside:auto}
+  .sect{padding-block:0 13mm;break-before:page;break-inside:auto;border-top:0}
   .grid{grid-template-columns:1fr;gap:0}
   .rail{position:static;display:flex;align-items:baseline;gap:8mm;margin-bottom:5mm;break-after:avoid}
   .rail .num{font-size:19pt}
   .rail .lbl{font-size:7.5pt;margin-top:0}
 
   /* covers and page turns */
-  .cover{break-after:page;height:297mm;display:flex;align-items:center}
+  .cover{page:cover;break-after:page;height:297mm;display:flex;align-items:center}
   .cover .wrap{width:100%;padding-block:0}
   .cover h1{font-size:54pt;line-height:.9}
   .cover .sub{font-size:11pt;max-width:none;margin-top:9mm}
   .meta{margin-top:18mm;padding-top:6mm;gap:7mm}
   .meta b{font-size:13pt}
-  .toc{break-after:page}
   .toc a{padding:4.6mm 0}
   .toc .t{font-size:15pt}
   .toc .d{font-size:8.5pt}
@@ -192,11 +194,13 @@ td code{font-size:12.5px;color:var(--brass-deep)}
 
   /* blocks that must stay whole */
   .pair,.quote,.spec,.sws,.pairs,.bands,.person,.comp,.sw,.scale div,.ledger>div,.pair>div,table tr{break-inside:avoid}
-  .pair{margin-top:8mm}
-  .pair>div{padding:9mm}
-  .pair h3{font-size:15pt}
-  .ledger{margin-top:8mm}
-  .ledger>div{padding:8mm}
+  .pair{margin-top:8mm;grid-template-columns:1fr 1fr}
+  .pair>div{padding:7mm}
+  .pair h3{font-size:14pt}
+  .pair li,.ledger li{font-size:8.5pt;padding:2.4mm 0}
+  .pair .t{font-size:8.5pt}
+  .ledger{margin-top:8mm;grid-template-columns:1fr 1fr}
+  .ledger>div{padding:7mm}
 
   .quote p{font-size:17pt;max-width:none}
   .sws{grid-template-columns:repeat(4,1fr);margin-top:8mm}
