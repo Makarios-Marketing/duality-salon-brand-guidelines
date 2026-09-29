@@ -2,31 +2,32 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap">
 <style>
 :root{
-  --ink:#161412;
-  --ink-2:#221F1C;
-  --ink-3:#2E2A26;
-  --ivory:#F8F4EE;
-  --sand:#EFE8DE;
+  --ink:#232427;
+  --ink-2:#2E2F33;
+  --ink-3:#3A3B3F;
+  --paper:#F5F7F9;
+  --mist:#E9EDF1;
   --white:#FFFFFF;
-  --line:#E3DACD;
-  --line-soft:#EBE3D8;
-  --stone:#72695F;
-  --stone-2:#A39A8F;
-  --brass:#8C6D43;
-  --brass-deep:#6F5433;
-  --brass-lt:#C9AF86;
+  --line:#D6DCE2;
+  --line-soft:#E3E8EC;
+  --grey:#65666A;
+  --grey-2:#9A9BA0;
+  --blue:#0677BA;
+  --blue-deep:#05639B;
+  --blue-lt:#7FB3D5;
+  --charcoal:#37373A;
   --serif:'Cormorant Garamond',Georgia,'Times New Roman',serif;
   --sans:'Jost','Segoe UI',Arial,sans-serif;
   --wrap:1180px;
   --rail:190px;
 }
 *{box-sizing:border-box}
-body{margin:0;background:var(--ivory);color:var(--ink);font-family:var(--sans);font-weight:400;font-size:16.5px;line-height:1.75;-webkit-font-smoothing:antialiased}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-weight:400;font-size:16.5px;line-height:1.75;-webkit-font-smoothing:antialiased}
 img{max-width:100%;display:block}
 p{margin:0}
-h1,h2,h3{margin:0;font-family:var(--serif);font-weight:300;letter-spacing:-.015em;text-wrap:balance}
-a{color:var(--brass-deep);text-underline-offset:3px}
-:focus-visible{outline:1px solid var(--brass);outline-offset:4px}
+h1,h2,h3{margin:0;color:var(--charcoal);font-family:var(--serif);font-weight:300;letter-spacing:-.015em;text-wrap:balance}
+a{color:var(--blue-deep);text-underline-offset:3px}
+:focus-visible{outline:1px solid var(--blue);outline-offset:4px}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 
 .wrap{width:100%;max-width:var(--wrap);margin-inline:auto;padding-inline:28px}
@@ -36,8 +37,8 @@ a{color:var(--brass-deep);text-underline-offset:3px}
 .sect{border-top:1px solid var(--line);padding-block:clamp(52px,7vw,104px)}
 .grid{display:grid;grid-template-columns:var(--rail) minmax(0,1fr);gap:clamp(24px,5vw,72px);align-items:start}
 .rail{position:sticky;top:40px}
-.rail .num{display:block;font-family:var(--serif);font-size:44px;font-weight:300;line-height:1;color:var(--brass);font-variant-numeric:lining-nums}
-.rail .lbl{display:block;margin-top:12px;font-size:11px;font-weight:400;letter-spacing:.3em;text-transform:uppercase;color:var(--stone)}
+.rail .num{display:block;font-family:var(--serif);font-size:44px;font-weight:300;line-height:1;color:var(--blue);font-variant-numeric:lining-nums}
+.rail .lbl{display:block;margin-top:12px;font-size:11px;font-weight:400;letter-spacing:.3em;text-transform:uppercase;color:var(--grey)}
 @media (max-width:900px){
   .grid{grid-template-columns:1fr;gap:20px}
   .rail{position:static;display:flex;align-items:baseline;gap:16px}
@@ -46,59 +47,59 @@ a{color:var(--brass-deep);text-underline-offset:3px}
 }
 
 h2.h2{font-size:clamp(30px,4.2vw,50px);line-height:1.08}
-h2.h2 em{font-style:italic;color:var(--brass)}
-.lede{margin-top:22px;font-family:var(--sans);font-weight:300;font-size:clamp(17px,1.5vw,19.5px);line-height:1.8;color:#463F37;max-width:60ch}
+h2.h2 em{font-style:italic;color:var(--blue)}
+.lede{margin-top:22px;font-family:var(--sans);font-weight:300;font-size:clamp(17px,1.5vw,19.5px);line-height:1.8;color:#3D4045;max-width:60ch}
 .lede+.lede{margin-top:18px}
 .lede strong{font-weight:500;color:var(--ink)}
-.note{margin-top:22px;font-size:14px;line-height:1.8;color:var(--stone);max-width:62ch}
-.kicker{font-size:11px;font-weight:400;letter-spacing:.3em;text-transform:uppercase;color:var(--stone);display:block;margin-bottom:18px}
+.note{margin-top:22px;font-size:14px;line-height:1.8;color:var(--grey);max-width:62ch}
+.kicker{font-size:11px;font-weight:400;letter-spacing:.3em;text-transform:uppercase;color:var(--grey);display:block;margin-bottom:18px}
 
 /* ── cover ── */
-.cover{background:var(--ink);color:var(--sand)}
+.cover{background:var(--ink);color:var(--mist)}
 .cover .wrap{padding-block:clamp(64px,10vw,152px)}
-.cover .kicker{color:var(--brass-lt)}
-.cover h1{font-size:clamp(58px,11vw,140px);line-height:.88;color:var(--ivory);letter-spacing:-.03em}
-.cover h1 em{font-style:italic;color:var(--brass-lt)}
-.cover .sub{margin-top:34px;font-weight:300;font-size:clamp(17px,1.6vw,20px);line-height:1.75;color:#B8AFA3;max-width:48ch}
+.cover .kicker{color:var(--blue-lt)}
+.cover h1{font-size:clamp(58px,11vw,140px);line-height:.88;color:var(--paper);letter-spacing:-.03em}
+.cover h1 em{font-style:italic;color:var(--blue-lt)}
+.cover .sub{margin-top:34px;font-weight:300;font-size:clamp(17px,1.6vw,20px);line-height:1.75;color:#A9AEB4;max-width:48ch}
 .meta{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:26px 32px;margin-top:64px;padding-top:28px;border-top:1px solid rgba(255,255,255,.14)}
-.meta span{font-size:10.5px;letter-spacing:.28em;text-transform:uppercase;color:#8A8177}
-.meta b{display:block;margin-top:9px;font-family:var(--serif);font-weight:300;font-size:21px;letter-spacing:0;text-transform:none;color:var(--ivory)}
+.meta span{font-size:10.5px;letter-spacing:.28em;text-transform:uppercase;color:#8A8F95}
+.meta b{display:block;margin-top:9px;font-family:var(--serif);font-weight:300;font-size:21px;letter-spacing:0;text-transform:none;color:var(--paper)}
 
 /* ── contents ── */
 .toc{border-top:1px solid var(--line)}
 .toc a{display:flex;align-items:baseline;gap:22px;padding:17px 0;border-bottom:1px solid var(--line-soft);color:var(--ink);text-decoration:none;transition:padding-left .25s,color .25s}
-.toc a:hover{padding-left:12px;color:var(--brass-deep)}
-.toc .n{font-family:var(--serif);font-size:16px;color:var(--brass);width:30px;flex:none}
+.toc a:hover{padding-left:12px;color:var(--blue-deep)}
+.toc .n{font-family:var(--serif);font-size:16px;color:var(--blue);width:30px;flex:none}
 .toc .t{font-family:var(--serif);font-size:clamp(20px,2.2vw,26px);font-weight:300;flex:1}
-.toc .d{font-size:13px;color:var(--stone);text-align:right;max-width:34ch}
+.toc .d{font-size:13px;color:var(--grey);text-align:right;max-width:34ch}
 @media (max-width:700px){.toc .d{display:none}}
 
 /* ── duality split ── */
 .pair{display:grid;grid-template-columns:1fr 1fr;margin-top:44px}
 .pair>div{padding:clamp(30px,3.6vw,46px)}
-.pair .soft{background:var(--sand)}
-.pair .hard{background:var(--ink);color:var(--sand)}
+.pair .soft{background:var(--mist)}
+.pair .hard{background:var(--ink);color:var(--mist)}
 .pair h3{font-size:clamp(24px,2.6vw,30px);margin-bottom:14px}
-.pair .hard h3{color:var(--ivory)}
-.pair .t{font-size:14.5px;line-height:1.8;color:var(--stone)}
-.pair .hard .t{color:#A39A8F}
+.pair .hard h3{color:var(--paper)}
+.pair .t{font-size:14.5px;line-height:1.8;color:var(--grey)}
+.pair .hard .t{color:#9A9BA0}
 .pair ul{margin:22px 0 0;padding:0;list-style:none}
 .pair li{padding:11px 0;border-top:1px solid var(--line);font-size:14.5px}
-.pair .hard li{border-top-color:rgba(255,255,255,.12);color:#C4BCB1}
+.pair .hard li{border-top-color:rgba(255,255,255,.12);color:#B4B9BF}
 @media (max-width:760px){.pair{grid-template-columns:1fr}}
 
 /* ── quote ── */
-.quote{margin-top:34px;padding-left:clamp(22px,3vw,38px);border-left:1px solid var(--brass)}
+.quote{margin-top:34px;padding-left:clamp(22px,3vw,38px);border-left:1px solid var(--blue)}
 .quote p{font-family:var(--serif);font-style:italic;font-weight:300;font-size:clamp(24px,3.2vw,38px);line-height:1.35;color:var(--ink);max-width:22ch}
-.quote cite{display:block;margin-top:18px;font-family:var(--sans);font-style:normal;font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--stone)}
+.quote cite{display:block;margin-top:18px;font-family:var(--sans);font-style:normal;font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--grey)}
 
 /* ── colour ── */
 .sws{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:2px;margin-top:40px}
 .sw .chip{height:140px}
 .sw .nm{margin-top:14px;font-family:var(--serif);font-size:20px;font-weight:400}
-.sw .hx{margin-top:2px;font-size:11.5px;letter-spacing:.14em;color:var(--stone);text-transform:uppercase}
-.sw .tok{font-size:11px;letter-spacing:.1em;color:var(--stone-2);margin-top:2px}
-.sw .us{margin-top:10px;font-size:13px;line-height:1.7;color:var(--stone);padding-right:12px}
+.sw .hx{margin-top:2px;font-size:11.5px;letter-spacing:.14em;color:var(--grey);text-transform:uppercase}
+.sw .tok{font-size:11px;letter-spacing:.1em;color:var(--grey-2);margin-top:2px}
+.sw .us{margin-top:10px;font-size:13px;line-height:1.7;color:var(--grey);padding-right:12px}
 .pairs{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:2px;margin-top:40px}
 .pairs div{padding:26px 22px;min-height:124px;display:flex;flex-direction:column;justify-content:space-between}
 .pairs b{font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;opacity:.8}
@@ -106,23 +107,23 @@ h2.h2 em{font-style:italic;color:var(--brass)}
 
 /* ── type specimens ── */
 .spec{margin-top:36px;padding-top:30px;border-top:1px solid var(--line)}
-.spec .tag{font-size:10.5px;letter-spacing:.28em;text-transform:uppercase;color:var(--stone);margin-bottom:22px}
+.spec .tag{font-size:10.5px;letter-spacing:.28em;text-transform:uppercase;color:var(--grey);margin-bottom:22px}
 .ser{font-family:var(--serif);font-weight:300;font-size:clamp(32px,5.4vw,62px);line-height:1.06;letter-spacing:-.02em}
-.ser em{font-style:italic;color:var(--brass)}
-.san{font-family:var(--sans);font-weight:300;font-size:clamp(17px,1.7vw,21px);line-height:1.65;color:#463F37}
+.ser em{font-style:italic;color:var(--blue)}
+.san{font-family:var(--sans);font-weight:300;font-size:clamp(17px,1.7vw,21px);line-height:1.65;color:#3D4045}
 .scale{margin-top:40px}
 .scale div{display:flex;align-items:baseline;gap:26px;padding:16px 0;border-top:1px solid var(--line-soft);flex-wrap:wrap}
-.scale .l{width:120px;flex:none;font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--stone-2)}
+.scale .l{width:120px;flex:none;font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--grey-2)}
 
 /* ── ledger (do / dont) ── */
 .ledger{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-top:38px}
-.ledger>div{background:var(--sand);padding:clamp(24px,2.8vw,34px)}
+.ledger>div{background:var(--mist);padding:clamp(24px,2.8vw,34px)}
 .ledger h4{margin:0 0 20px;font-family:var(--sans);font-size:10.5px;font-weight:500;letter-spacing:.28em;text-transform:uppercase}
-.ledger .y h4{color:var(--brass-deep)}
-.ledger .n h4{color:var(--stone)}
+.ledger .y h4{color:var(--blue-deep)}
+.ledger .n h4{color:var(--grey)}
 .ledger ul{margin:0;padding:0;list-style:none}
 .ledger li{padding:11px 0;border-top:1px solid var(--line);font-size:14.5px;line-height:1.7}
-.ledger .n li{color:var(--stone)}
+.ledger .n li{color:var(--grey)}
 @media (max-width:760px){.ledger{grid-template-columns:1fr}}
 
 /* ── layout patterns ── */
@@ -131,17 +132,17 @@ h2.h2 em{font-style:italic;color:var(--brass)}
 .comps{margin-top:40px;border-top:1px solid var(--line)}
 .comp{display:grid;grid-template-columns:200px minmax(0,1fr);gap:clamp(18px,4vw,44px);padding:26px 0;border-bottom:1px solid var(--line-soft)}
 .comp .nm{font-family:var(--serif);font-size:22px;font-weight:400;line-height:1.2}
-.comp .nm span{display:block;margin-top:6px;font-family:var(--sans);font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--stone-2)}
-.comp .ds{font-size:15px;line-height:1.8;color:#463F37}
+.comp .nm span{display:block;margin-top:6px;font-family:var(--sans);font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--grey-2)}
+.comp .ds{font-size:15px;line-height:1.8;color:#3D4045}
 @media (max-width:760px){.comp{grid-template-columns:1fr;gap:10px}}
 
 /* ── team ── */
 .team{margin-top:40px;border-top:1px solid var(--line)}
 .person{display:grid;grid-template-columns:230px minmax(0,1fr);gap:clamp(20px,4vw,52px);padding:34px 0;border-bottom:1px solid var(--line-soft)}
-.person .who .role{font-size:10.5px;letter-spacing:.26em;text-transform:uppercase;color:var(--brass-deep)}
+.person .who .role{font-size:10.5px;letter-spacing:.26em;text-transform:uppercase;color:var(--blue-deep)}
 .person .who h3{margin-top:10px;font-size:clamp(26px,2.8vw,32px);line-height:1.1}
-.person .who .yrs{margin-top:8px;font-size:12.5px;letter-spacing:.1em;color:var(--stone-2)}
-.person .bio p{font-size:15.5px;line-height:1.85;color:#463F37}
+.person .who .yrs{margin-top:8px;font-size:12.5px;letter-spacing:.1em;color:var(--grey-2)}
+.person .bio p{font-size:15.5px;line-height:1.85;color:#3D4045}
 .person .bio p+p{margin-top:14px}
 @media (max-width:760px){.person{grid-template-columns:1fr;gap:14px}}
 
@@ -149,10 +150,10 @@ h2.h2 em{font-style:italic;color:var(--brass)}
 .tw{display:block;overflow-x:auto;margin-top:36px}
 table{width:100%;border-collapse:collapse;font-size:14px;min-width:560px}
 th,td{text-align:left;padding:14px 18px 14px 0;border-bottom:1px solid var(--line-soft);vertical-align:top}
-th{font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--stone-2);font-weight:400;border-bottom-color:var(--line)}
-td code{font-size:12.5px;color:var(--brass-deep)}
+th{font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--grey-2);font-weight:400;border-bottom-color:var(--line)}
+td code{font-size:12.5px;color:var(--blue-deep)}
 
-.foot{background:var(--ink);color:#6E665D;font-size:12px;letter-spacing:.06em}
+.foot{background:var(--ink);color:#767B81;font-size:12px;letter-spacing:.06em}
 .foot .wrap{padding-block:34px;border-top:1px solid rgba(255,255,255,.1)}
 
 @media print{
@@ -234,7 +235,7 @@ td code{font-size:12.5px;color:var(--brass-deep)}
   th,td{padding:4.5mm 4mm 4.5mm 0;word-break:break-word}
   td code{font-size:7.5pt}
 
-  a{color:var(--brass-deep);text-decoration:none}
+  a{color:var(--blue-deep);text-decoration:none}
   /* closing page: full ink sheet, details sitting on the bottom edge,
      mirroring the front cover */
   /* back cover: padding drives the height, so the ink always wraps the text */
@@ -291,7 +292,7 @@ td code{font-size:12.5px;color:var(--brass-deep)}
           <h3>Soft</h3>
           <p class="t">Warm, personal, unhurried. The half that makes someone feel looked after.</p>
           <ul>
-            <li>Sand and ivory grounds, brass warmth</li>
+            <li>Paper and mist grounds, a single blue accent</li>
             <li>Cormorant Garamond, light and high contrast</li>
             <li>Natural window light, skin tones, texture</li>
             <li>Language about conversation and care</li>
@@ -352,26 +353,27 @@ td code{font-size:12.5px;color:var(--brass-deep)}
   <div class="wrap grid">
     <div class="rail"><span class="num">03</span><span class="lbl">Colour</span></div>
     <div>
-      <h2 class="h2">Warm ground, ink <em>structure</em>, one brass accent.</h2>
-      <p class="lede">These are the tokens already in the build. Sand and ivory carry the soft half and should cover most of any page. Ink carries the industrial half and does the structural work. Brass is the only accent, and it is used sparingly.</p>
-      <p class="note">Worth noting: the sand ground is almost exactly the salon's own wall colour, and the brass matches the woven pendant lights. The palette was read from the room, not chosen for it.</p>
+      <h2 class="h2">Their blue, their grey, <em>one cool ground</em>.</h2>
+      <p class="lede">The palette is built out of the existing logo, not around it. Paper and mist carry the soft half and should cover most of any page. Ink and charcoal carry the industrial half and do the structural work. Blue is the only accent, and it is used sparingly.</p>
+      <p class="note">Blue #0677BA and charcoal #37373A are lifted straight from the logo, unchanged. Everything else is built to sit with them: the greys are cooled to match, and the grounds are a soft blue-white rather than a warm cream. The logo sets the palette, so the mark never has to fight the page it sits on.</p>
 
       <div class="sws">
-        <div class="sw"><div class="chip" style="background:#EFE8DE;box-shadow:inset 0 0 0 1px #E3DACD"></div><div class="nm">Sand</div><div class="hx">#EFE8DE</div><div class="tok">--sand</div><div class="us">Page ground. The salon's wall colour.</div></div>
-        <div class="sw"><div class="chip" style="background:#F8F4EE;box-shadow:inset 0 0 0 1px #E3DACD"></div><div class="nm">Ivory</div><div class="hx">#F8F4EE</div><div class="tok">--ivory</div><div class="us">Panels that lift off the sand.</div></div>
-        <div class="sw"><div class="chip" style="background:#E3DACD"></div><div class="nm">Line</div><div class="hx">#E3DACD</div><div class="tok">--line</div><div class="us">Hairlines and dividers. One weight.</div></div>
-        <div class="sw"><div class="chip" style="background:#8C6D43"></div><div class="nm">Brass</div><div class="hx">#8C6D43</div><div class="tok">--brass</div><div class="us">The one accent. Buttons, rules, large type.</div></div>
-        <div class="sw"><div class="chip" style="background:#6F5433"></div><div class="nm">Brass Deep</div><div class="hx">#6F5433</div><div class="tok">--brass-deep</div><div class="us">Links and small accent type on light grounds.</div></div>
-        <div class="sw"><div class="chip" style="background:#C9AF86"></div><div class="nm">Brass Light</div><div class="hx">#C9AF86</div><div class="tok">--brass-lt</div><div class="us">Accent on dark only. Never on sand.</div></div>
-        <div class="sw"><div class="chip" style="background:#161412"></div><div class="nm">Ink</div><div class="hx">#161412</div><div class="tok">--ink</div><div class="us">Body text, and the team's black.</div></div>
-        <div class="sw"><div class="chip" style="background:#72695F"></div><div class="nm">Stone</div><div class="hx">#72695F</div><div class="tok">--stone</div><div class="us">Secondary text and labels.</div></div>
+        <div class="sw"><div class="chip" style="background:#0677BA"></div><div class="nm">Blue</div><div class="hx">#0677BA</div><div class="tok">--blue</div><div class="us">From the logo, unchanged. The one accent: buttons, rules, large type.</div></div>
+        <div class="sw"><div class="chip" style="background:#05639B"></div><div class="nm">Blue Deep</div><div class="hx">#05639B</div><div class="tok">--blue-deep</div><div class="us">Links and small accent type on light grounds.</div></div>
+        <div class="sw"><div class="chip" style="background:#7FB3D5"></div><div class="nm">Blue Light</div><div class="hx">#7FB3D5</div><div class="tok">--blue-lt</div><div class="us">Accent on dark grounds only. Never on mist.</div></div>
+        <div class="sw"><div class="chip" style="background:#37373A"></div><div class="nm">Charcoal</div><div class="hx">#37373A</div><div class="tok">--charcoal</div><div class="us">The logo wordmark colour. All headings.</div></div>
+        <div class="sw"><div class="chip" style="background:#232427"></div><div class="nm">Ink</div><div class="hx">#232427</div><div class="tok">--ink</div><div class="us">Body text, and the dark full-bleed grounds.</div></div>
+        <div class="sw"><div class="chip" style="background:#65666A"></div><div class="nm">Grey</div><div class="hx">#65666A</div><div class="tok">--grey</div><div class="us">Secondary text and labels. A half-step deeper than the logo grey so it stays readable at body size.</div></div>
+        <div class="sw"><div class="chip" style="background:#E9EDF1;box-shadow:inset 0 0 0 1px #D6DCE2"></div><div class="nm">Mist</div><div class="hx">#E9EDF1</div><div class="tok">--mist</div><div class="us">Panels and blocks that sit on the paper.</div></div>
+        <div class="sw"><div class="chip" style="background:#F5F7F9;box-shadow:inset 0 0 0 1px #D6DCE2"></div><div class="nm">Paper</div><div class="hx">#F5F7F9</div><div class="tok">--paper</div><div class="us">Page ground.</div></div>
+        <div class="sw"><div class="chip" style="background:#D6DCE2"></div><div class="nm">Line</div><div class="hx">#D6DCE2</div><div class="tok">--line</div><div class="us">Hairlines and dividers. One weight.</div></div>
       </div>
 
       <div class="pairs">
-        <div style="background:#161412;color:#EFE8DE"><b>Sand on Ink</b><span>15.4 : 1 · safe at any size</span></div>
-        <div style="background:#EFE8DE;color:#161412"><b>Ink on Sand</b><span>15.4 : 1 · the default reading pair</span></div>
-        <div style="background:#EFE8DE;color:#8C6D43"><b>Brass on Sand</b><span>3.9 : 1 · large text and buttons only</span></div>
-        <div style="background:#EFE8DE;color:#6F5433"><b>Brass Deep on Sand</b><span>5.8 : 1 · use for links and small type</span></div>
+        <div style="background:#232427;color:#E9EDF1"><b>Mist on Ink</b><span>13.2 : 1 · safe at any size</span></div>
+        <div style="background:#E9EDF1;color:#232427"><b>Ink on Mist</b><span>13.2 : 1 · the default reading pair</span></div>
+        <div style="background:#E9EDF1;color:#0677BA"><b>Blue on Mist</b><span>4.1 : 1 · large text and buttons only</span></div>
+        <div style="background:#E9EDF1;color:#05639B"><b>Blue Deep on Mist</b><span>5.5 : 1 · use for links and small type</span></div></div>
       </div>
     </div>
   </div>
@@ -416,19 +418,19 @@ td code{font-size:12.5px;color:var(--brass-deep)}
       <p class="lede">The single most important structural rule in the build is the band rhythm. Cream section, then ink section, then cream again, the whole way down. That is not decoration. It is the soft and industrial pairing made structural, so the page performs the brand idea rather than describing it.</p>
 
       <div class="bands">
-        <div style="background:#EFE8DE;color:#72695F">Sand</div>
-        <div style="background:#161412;color:#A39A8F">Ink</div>
-        <div style="background:#EFE8DE;color:#72695F">Sand</div>
-        <div style="background:#161412;color:#A39A8F">Ink</div>
-        <div style="background:#EFE8DE;color:#72695F">Sand</div>
-        <div style="background:#161412;color:#A39A8F">Ink</div>
+        <div style="background:#E9EDF1;color:#65666A">Sand</div>
+        <div style="background:#232427;color:#9A9BA0">Ink</div>
+        <div style="background:#E9EDF1;color:#65666A">Sand</div>
+        <div style="background:#232427;color:#9A9BA0">Ink</div>
+        <div style="background:#E9EDF1;color:#65666A">Sand</div>
+        <div style="background:#232427;color:#9A9BA0">Ink</div>
       </div>
       <p class="note">Two rules keep it working. Never place two ink bands next to each other, and give every band enough vertical padding that the alternation reads as deliberate rather than stripey. Dark bands carry the moments that need weight: pricing, the never-overbook promise, education, and the closing call to action.</p>
 
       <h3 style="margin-top:56px;font-size:clamp(22px,2.4vw,28px)">Recurring devices</h3>
       <div class="comps">
         <div class="comp">
-          <div class="nm">The brass seal<span>Graphic device</span></div>
+          <div class="nm">The blue seal<span>Graphic device</span></div>
           <div class="ds">The circular monogram works as a stamp on dark bands, set large and low in opacity behind content, or small and solid as a badge. Use it once per band at most. It is the only ornament the brand needs.</div>
         </div>
         <div class="comp">
@@ -437,7 +439,7 @@ td code{font-size:12.5px;color:var(--brass-deep)}
         </div>
         <div class="comp">
           <div class="nm">Eyebrow label<span>Section marker</span></div>
-          <div class="ds">A small-caps Jost label sits above every section heading, tracked wide in stone or brass. It gives the long page structure without adding rules everywhere.</div>
+          <div class="ds">A small-caps Jost label sits above every section heading, tracked wide in grey or blue. It gives the long page structure without adding rules everywhere.</div>
         </div>
         <div class="comp">
           <div class="nm">The offset card<span>Image treatment</span></div>
@@ -449,7 +451,7 @@ td code{font-size:12.5px;color:var(--brass-deep)}
         </div>
         <div class="comp">
           <div class="nm">The step row<span>Process pattern</span></div>
-          <div class="ds">Four steps across, separated by hairlines rather than arrows or numbers in circles. Book, consultation, service, at-home care. Numbers stay small and in brass.</div>
+          <div class="ds">Four steps across, separated by hairlines rather than arrows or numbers in circles. Book, consultation, service, at-home care. Numbers stay small and in blue.</div>
         </div>
         <div class="comp">
           <div class="nm">Full-bleed photo strip<span>Gallery pattern</span></div>
@@ -462,7 +464,7 @@ td code{font-size:12.5px;color:var(--brass-deep)}
           <h4>Buttons</h4>
           <ul>
             <li>Primary: solid ink, ivory text, no radius</li>
-            <li>Secondary: hairline outline, brass text</li>
+            <li>Secondary: hairline outline, blue text</li>
             <li>On ink bands: hairline outline, ivory text</li>
             <li>Labels in Jost, tracked, sentence case</li>
           </ul>
