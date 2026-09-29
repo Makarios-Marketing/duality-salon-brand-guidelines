@@ -1,0 +1,599 @@
+<title>Duality Salon Brand Guidelines</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap">
+<style>
+:root{
+  --ink:#161412;
+  --ink-2:#221F1C;
+  --ink-3:#2E2A26;
+  --ivory:#F8F4EE;
+  --sand:#EFE8DE;
+  --white:#FFFFFF;
+  --line:#E3DACD;
+  --line-soft:#EBE3D8;
+  --stone:#72695F;
+  --stone-2:#A39A8F;
+  --brass:#8C6D43;
+  --brass-deep:#6F5433;
+  --brass-lt:#C9AF86;
+  --serif:'Cormorant Garamond',Georgia,'Times New Roman',serif;
+  --sans:'Jost','Segoe UI',Arial,sans-serif;
+  --wrap:1180px;
+  --rail:190px;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--ivory);color:var(--ink);font-family:var(--sans);font-weight:400;font-size:16.5px;line-height:1.75;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+p{margin:0}
+h1,h2,h3{margin:0;font-family:var(--serif);font-weight:300;letter-spacing:-.015em;text-wrap:balance}
+a{color:var(--brass-deep);text-underline-offset:3px}
+:focus-visible{outline:1px solid var(--brass);outline-offset:4px}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+.wrap{width:100%;max-width:var(--wrap);margin-inline:auto;padding-inline:28px}
+@media (max-width:560px){.wrap{padding-inline:20px}}
+
+/* ── section shell: label rail + content ── */
+.sect{border-top:1px solid var(--line);padding-block:clamp(52px,7vw,104px)}
+.grid{display:grid;grid-template-columns:var(--rail) minmax(0,1fr);gap:clamp(24px,5vw,72px);align-items:start}
+.rail{position:sticky;top:40px}
+.rail .num{display:block;font-family:var(--serif);font-size:44px;font-weight:300;line-height:1;color:var(--brass);font-variant-numeric:lining-nums}
+.rail .lbl{display:block;margin-top:12px;font-size:11px;font-weight:400;letter-spacing:.3em;text-transform:uppercase;color:var(--stone)}
+@media (max-width:900px){
+  .grid{grid-template-columns:1fr;gap:20px}
+  .rail{position:static;display:flex;align-items:baseline;gap:16px}
+  .rail .num{font-size:30px}
+  .rail .lbl{margin-top:0}
+}
+
+h2.h2{font-size:clamp(30px,4.2vw,50px);line-height:1.08}
+h2.h2 em{font-style:italic;color:var(--brass)}
+.lede{margin-top:22px;font-family:var(--sans);font-weight:300;font-size:clamp(17px,1.5vw,19.5px);line-height:1.8;color:#463F37;max-width:60ch}
+.lede+.lede{margin-top:18px}
+.lede strong{font-weight:500;color:var(--ink)}
+.note{margin-top:22px;font-size:14px;line-height:1.8;color:var(--stone);max-width:62ch}
+.kicker{font-size:11px;font-weight:400;letter-spacing:.3em;text-transform:uppercase;color:var(--stone);display:block;margin-bottom:18px}
+
+/* ── cover ── */
+.cover{background:var(--ink);color:var(--sand)}
+.cover .wrap{padding-block:clamp(64px,10vw,152px)}
+.cover .kicker{color:var(--brass-lt)}
+.cover h1{font-size:clamp(58px,11vw,140px);line-height:.88;color:var(--ivory);letter-spacing:-.03em}
+.cover h1 em{font-style:italic;color:var(--brass-lt)}
+.cover .sub{margin-top:34px;font-weight:300;font-size:clamp(17px,1.6vw,20px);line-height:1.75;color:#B8AFA3;max-width:48ch}
+.meta{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:26px 32px;margin-top:64px;padding-top:28px;border-top:1px solid rgba(255,255,255,.14)}
+.meta span{font-size:10.5px;letter-spacing:.28em;text-transform:uppercase;color:#8A8177}
+.meta b{display:block;margin-top:9px;font-family:var(--serif);font-weight:300;font-size:21px;letter-spacing:0;text-transform:none;color:var(--ivory)}
+
+/* ── contents ── */
+.toc{border-top:1px solid var(--line)}
+.toc a{display:flex;align-items:baseline;gap:22px;padding:17px 0;border-bottom:1px solid var(--line-soft);color:var(--ink);text-decoration:none;transition:padding-left .25s,color .25s}
+.toc a:hover{padding-left:12px;color:var(--brass-deep)}
+.toc .n{font-family:var(--serif);font-size:16px;color:var(--brass);width:30px;flex:none}
+.toc .t{font-family:var(--serif);font-size:clamp(20px,2.2vw,26px);font-weight:300;flex:1}
+.toc .d{font-size:13px;color:var(--stone);text-align:right;max-width:34ch}
+@media (max-width:700px){.toc .d{display:none}}
+
+/* ── duality split ── */
+.pair{display:grid;grid-template-columns:1fr 1fr;margin-top:44px}
+.pair>div{padding:clamp(30px,3.6vw,46px)}
+.pair .soft{background:var(--sand)}
+.pair .hard{background:var(--ink);color:var(--sand)}
+.pair h3{font-size:clamp(24px,2.6vw,30px);margin-bottom:14px}
+.pair .hard h3{color:var(--ivory)}
+.pair .t{font-size:14.5px;line-height:1.8;color:var(--stone)}
+.pair .hard .t{color:#A39A8F}
+.pair ul{margin:22px 0 0;padding:0;list-style:none}
+.pair li{padding:11px 0;border-top:1px solid var(--line);font-size:14.5px}
+.pair .hard li{border-top-color:rgba(255,255,255,.12);color:#C4BCB1}
+@media (max-width:760px){.pair{grid-template-columns:1fr}}
+
+/* ── quote ── */
+.quote{margin-top:34px;padding-left:clamp(22px,3vw,38px);border-left:1px solid var(--brass)}
+.quote p{font-family:var(--serif);font-style:italic;font-weight:300;font-size:clamp(24px,3.2vw,38px);line-height:1.35;color:var(--ink);max-width:22ch}
+.quote cite{display:block;margin-top:18px;font-family:var(--sans);font-style:normal;font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--stone)}
+
+/* ── colour ── */
+.sws{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:2px;margin-top:40px}
+.sw .chip{height:140px}
+.sw .nm{margin-top:14px;font-family:var(--serif);font-size:20px;font-weight:400}
+.sw .hx{margin-top:2px;font-size:11.5px;letter-spacing:.14em;color:var(--stone);text-transform:uppercase}
+.sw .tok{font-size:11px;letter-spacing:.1em;color:var(--stone-2);margin-top:2px}
+.sw .us{margin-top:10px;font-size:13px;line-height:1.7;color:var(--stone);padding-right:12px}
+.pairs{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:2px;margin-top:40px}
+.pairs div{padding:26px 22px;min-height:124px;display:flex;flex-direction:column;justify-content:space-between}
+.pairs b{font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;opacity:.8}
+.pairs span{font-size:13.5px;line-height:1.6;margin-top:16px}
+
+/* ── type specimens ── */
+.spec{margin-top:36px;padding-top:30px;border-top:1px solid var(--line)}
+.spec .tag{font-size:10.5px;letter-spacing:.28em;text-transform:uppercase;color:var(--stone);margin-bottom:22px}
+.ser{font-family:var(--serif);font-weight:300;font-size:clamp(32px,5.4vw,62px);line-height:1.06;letter-spacing:-.02em}
+.ser em{font-style:italic;color:var(--brass)}
+.san{font-family:var(--sans);font-weight:300;font-size:clamp(17px,1.7vw,21px);line-height:1.65;color:#463F37}
+.scale{margin-top:40px}
+.scale div{display:flex;align-items:baseline;gap:26px;padding:16px 0;border-top:1px solid var(--line-soft);flex-wrap:wrap}
+.scale .l{width:120px;flex:none;font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--stone-2)}
+
+/* ── ledger (do / dont) ── */
+.ledger{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-top:38px}
+.ledger>div{background:var(--sand);padding:clamp(24px,2.8vw,34px)}
+.ledger h4{margin:0 0 20px;font-family:var(--sans);font-size:10.5px;font-weight:500;letter-spacing:.28em;text-transform:uppercase}
+.ledger .y h4{color:var(--brass-deep)}
+.ledger .n h4{color:var(--stone)}
+.ledger ul{margin:0;padding:0;list-style:none}
+.ledger li{padding:11px 0;border-top:1px solid var(--line);font-size:14.5px;line-height:1.7}
+.ledger .n li{color:var(--stone)}
+@media (max-width:760px){.ledger{grid-template-columns:1fr}}
+
+/* ── layout patterns ── */
+.bands{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:2px;margin-top:38px}
+.bands div{height:76px;display:flex;align-items:flex-end;padding:10px 12px;font-size:10px;letter-spacing:.2em;text-transform:uppercase}
+.comps{margin-top:40px;border-top:1px solid var(--line)}
+.comp{display:grid;grid-template-columns:200px minmax(0,1fr);gap:clamp(18px,4vw,44px);padding:26px 0;border-bottom:1px solid var(--line-soft)}
+.comp .nm{font-family:var(--serif);font-size:22px;font-weight:400;line-height:1.2}
+.comp .nm span{display:block;margin-top:6px;font-family:var(--sans);font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--stone-2)}
+.comp .ds{font-size:15px;line-height:1.8;color:#463F37}
+@media (max-width:760px){.comp{grid-template-columns:1fr;gap:10px}}
+
+/* ── team ── */
+.team{margin-top:40px;border-top:1px solid var(--line)}
+.person{display:grid;grid-template-columns:230px minmax(0,1fr);gap:clamp(20px,4vw,52px);padding:34px 0;border-bottom:1px solid var(--line-soft)}
+.person .who .role{font-size:10.5px;letter-spacing:.26em;text-transform:uppercase;color:var(--brass-deep)}
+.person .who h3{margin-top:10px;font-size:clamp(26px,2.8vw,32px);line-height:1.1}
+.person .who .yrs{margin-top:8px;font-size:12.5px;letter-spacing:.1em;color:var(--stone-2)}
+.person .bio p{font-size:15.5px;line-height:1.85;color:#463F37}
+.person .bio p+p{margin-top:14px}
+@media (max-width:760px){.person{grid-template-columns:1fr;gap:14px}}
+
+/* ── table ── */
+.tw{display:block;overflow-x:auto;margin-top:36px}
+table{width:100%;border-collapse:collapse;font-size:14px;min-width:560px}
+th,td{text-align:left;padding:14px 18px 14px 0;border-bottom:1px solid var(--line-soft);vertical-align:top}
+th{font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--stone-2);font-weight:400;border-bottom-color:var(--line)}
+td code{font-size:12.5px;color:var(--brass-deep)}
+.tag-fix{display:inline-block;padding:2px 9px;border:1px solid var(--brass);font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--brass-deep);white-space:nowrap}
+
+.foot{background:var(--ink);color:#6E665D;font-size:12px;letter-spacing:.06em}
+.foot .wrap{padding-block:34px;border-top:1px solid rgba(255,255,255,.1)}
+
+@media print{
+  @page{size:A4;margin:14mm 12mm}
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  body{font-size:10.5pt;line-height:1.55}
+  .wrap{max-width:none;padding-inline:0}
+  .sect{padding-block:14mm;break-inside:auto}
+  .cover{break-after:page}
+  .cover .wrap{padding-block:34mm 24mm}
+  .cover h1{font-size:58pt}
+  .rail{position:static;display:flex;align-items:baseline;gap:10mm;margin-bottom:6mm}
+  .rail .num{font-size:20pt}
+  .grid{grid-template-columns:1fr;gap:0}
+  h2.h2{font-size:22pt;break-after:avoid}
+  h3{break-after:avoid}
+  .lede{font-size:10.5pt;max-width:none}
+  .toc{break-after:page}
+  .person,.comp,.sw,.ledger>div,.pair>div,.spec,.scale div,.item{break-inside:avoid}
+  .sws{grid-template-columns:repeat(4,1fr)}
+  .sw .chip{height:26mm}
+  .pairs{grid-template-columns:repeat(2,1fr)}
+  .bands{grid-template-columns:repeat(6,1fr)}
+  .bands div{height:18mm}
+  table{min-width:0;font-size:9pt}
+  .tw{overflow:visible}
+  a{color:var(--brass-deep);text-decoration:none}
+  .foot{break-before:avoid}
+}
+</style>
+
+<header class="cover">
+  <div class="wrap">
+    <span class="kicker">Brand Guidelines · Makarios Marketing</span>
+    <h1>Duality<br><em>Salon</em></h1>
+    <p class="sub">A mother and daughter, two generations of one craft, and a room that is soft and industrial at once. This is how the brand looks, reads and photographs.</p>
+    <div class="meta">
+      <span>Client<b>Duality Salon</b></span>
+      <span>Location<b>Williamsville, NY</b></span>
+      <span>Contact<b>Sue Dicky</b></span>
+      </div>
+  </div>
+</header>
+
+<main>
+
+<section class="sect" style="padding-block:clamp(40px,4vw,64px)">
+  <div class="wrap">
+    <span class="kicker">Contents</span>
+    <nav class="toc">
+      <a href="#idea"><span class="n">01</span><span class="t">The Idea</span><span class="d">Why the name is the strategy</span></a>
+      <a href="#position"><span class="n">02</span><span class="t">Positioning</span><span class="d">Sue and Leah, front and centre</span></a>
+      <a href="#colour"><span class="n">03</span><span class="t">Colour</span><span class="d">Eight tokens, one accent</span></a>
+      <a href="#type"><span class="n">04</span><span class="t">Typography</span><span class="d">Cormorant Garamond and Jost</span></a>
+      <a href="#layout"><span class="n">05</span><span class="t">Layout</span><span class="d">Bands, devices and components</span></a>
+      <a href="#photo"><span class="n">06</span><span class="t">Photography</span><span class="d">The room does the work</span></a>
+      <a href="#voice"><span class="n">07</span><span class="t">Voice</span><span class="d">Expert, warm, never salesy</span></a>
+      <a href="#team"><span class="n">08</span><span class="t">The Team</span><span class="d">Bios for the About page</span></a>
+      <a href="#assets"><span class="n">09</span><span class="t">Assets</span><span class="d">What we have, what needs work</span></a>
+    </nav>
+  </div>
+</section>
+
+<section class="sect" id="idea">
+  <div class="wrap grid">
+    <div class="rail"><span class="num">01</span><span class="lbl">The Idea</span></div>
+    <div>
+      <h2 class="h2">The name is the <em>whole strategy</em>.</h2>
+      <p class="lede">We do not need to invent this. The salon already says it, in their own words.</p>
+      <blockquote class="quote">
+        <p>Beautiful style is achieved through mastery of contrasting elements: dark and light, wavy and straight, dynamic and still.</p>
+        <cite>Duality Salon</cite>
+      </blockquote>
+      <p class="lede">That line is the brand strategy, and it belongs somewhere prominent on the new site. Everything in this document is that idea applied. It is true of the salon three times over: Sue and Leah are mother and daughter, the room is soft and industrial at once, and the work is both technical precision and personal care.</p>
+
+      <div class="pair">
+        <div class="soft">
+          <h3>Soft</h3>
+          <p class="t">Warm, personal, unhurried. The half that makes someone feel looked after.</p>
+          <ul>
+            <li>Sand and ivory grounds, brass warmth</li>
+            <li>Cormorant Garamond, light and high contrast</li>
+            <li>Natural window light, skin tones, texture</li>
+            <li>Language about conversation and care</li>
+          </ul>
+        </div>
+        <div class="hard">
+          <h3>Industrial</h3>
+          <p class="t">Clean, precise, confident. The half that says these people know exactly what they are doing.</p>
+          <ul>
+            <li>Ink grounds and hairline rules</li>
+            <li>Jost, geometric and even in colour</li>
+            <li>Straight edges, generous space, no clutter</li>
+            <li>Language about precision and craft</li>
+          </ul>
+        </div>
+      </div>
+      <p class="note">Use both on every surface. All soft goes generic salon. All industrial goes cold. The tension between them is the brand.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sect" id="position">
+  <div class="wrap grid">
+    <div class="rail"><span class="num">02</span><span class="lbl">Positioning</span></div>
+    <div>
+      <h2 class="h2">Sue and Leah, <em>front and centre</em>.</h2>
+      <p class="lede">The client's own direction, and the right one. Most salon sites lead with a stock photo of hair. This one leads with two named people and a family story, which is the one thing competitors cannot copy.</p>
+      <p class="lede">Sue is Artistic Director, with four decades behind the chair and a background as a L'ANZA educator training stylists up and down the East Coast. Leah is the owner. She grew up in it and now leads the education side. That hand-off between generations is the story both the homepage and the About page should carry.</p>
+      <p class="lede">Three proof points the build already uses well, all worth protecting: <strong>100+ years of combined experience</strong> across five stylists, <strong>established 2020</strong> in Williamsville, and the promise that the salon <strong>never overbooks</strong>. That last one is the strongest thing on the page, because it is a specific operational commitment rather than an adjective.</p>
+
+      <div class="ledger">
+        <div class="y">
+          <h4>Lead with</h4>
+          <ul>
+            <li>Named stylists with real faces</li>
+            <li>The mother and daughter thread</li>
+            <li>Never overbooking, stated plainly</li>
+            <li>Education, and the L'ANZA roots</li>
+            <li>Long-standing client relationships</li>
+          </ul>
+        </div>
+        <div class="n">
+          <h4>Avoid</h4>
+          <ul>
+            <li>Stock salon photography of any kind</li>
+            <li>Luxury filler such as pamper or indulge</li>
+            <li>Leading with price or promotions</li>
+            <li>Anonymous "our team of experts"</li>
+            <li>Exclamation marks anywhere</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sect" id="colour">
+  <div class="wrap grid">
+    <div class="rail"><span class="num">03</span><span class="lbl">Colour</span></div>
+    <div>
+      <h2 class="h2">Warm ground, ink <em>structure</em>, one brass accent.</h2>
+      <p class="lede">These are the tokens already in the build. Sand and ivory carry the soft half and should cover most of any page. Ink carries the industrial half and does the structural work. Brass is the only accent, and it is used sparingly.</p>
+      <p class="note">Worth noting: the sand ground is almost exactly the salon's own wall colour, and the brass matches the woven pendant lights. The palette was read from the room, not chosen for it.</p>
+
+      <div class="sws">
+        <div class="sw"><div class="chip" style="background:#EFE8DE;box-shadow:inset 0 0 0 1px #E3DACD"></div><div class="nm">Sand</div><div class="hx">#EFE8DE</div><div class="tok">--sand</div><div class="us">Page ground. The salon's wall colour.</div></div>
+        <div class="sw"><div class="chip" style="background:#F8F4EE;box-shadow:inset 0 0 0 1px #E3DACD"></div><div class="nm">Ivory</div><div class="hx">#F8F4EE</div><div class="tok">--ivory</div><div class="us">Panels that lift off the sand.</div></div>
+        <div class="sw"><div class="chip" style="background:#E3DACD"></div><div class="nm">Line</div><div class="hx">#E3DACD</div><div class="tok">--line</div><div class="us">Hairlines and dividers. One weight.</div></div>
+        <div class="sw"><div class="chip" style="background:#8C6D43"></div><div class="nm">Brass</div><div class="hx">#8C6D43</div><div class="tok">--brass</div><div class="us">The one accent. Buttons, rules, large type.</div></div>
+        <div class="sw"><div class="chip" style="background:#6F5433"></div><div class="nm">Brass Deep</div><div class="hx">#6F5433</div><div class="tok">--brass-deep</div><div class="us">Links and small accent type on light grounds.</div></div>
+        <div class="sw"><div class="chip" style="background:#C9AF86"></div><div class="nm">Brass Light</div><div class="hx">#C9AF86</div><div class="tok">--brass-lt</div><div class="us">Accent on dark only. Never on sand.</div></div>
+        <div class="sw"><div class="chip" style="background:#161412"></div><div class="nm">Ink</div><div class="hx">#161412</div><div class="tok">--ink</div><div class="us">Body text, and the team's black.</div></div>
+        <div class="sw"><div class="chip" style="background:#72695F"></div><div class="nm">Stone</div><div class="hx">#72695F</div><div class="tok">--stone</div><div class="us">Secondary text and labels.</div></div>
+      </div>
+
+      <div class="pairs">
+        <div style="background:#161412;color:#EFE8DE"><b>Sand on Ink</b><span>15.4 : 1 · safe at any size</span></div>
+        <div style="background:#EFE8DE;color:#161412"><b>Ink on Sand</b><span>15.4 : 1 · the default reading pair</span></div>
+        <div style="background:#EFE8DE;color:#8C6D43"><b>Brass on Sand</b><span>3.9 : 1 · large text and buttons only</span></div>
+        <div style="background:#EFE8DE;color:#6F5433"><b>Brass Deep on Sand</b><span>5.8 : 1 · use for links and small type</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sect" id="type">
+  <div class="wrap grid">
+    <div class="rail"><span class="num">04</span><span class="lbl">Typography</span></div>
+    <div>
+      <h2 class="h2">One serif with warmth, one sans with <em>discipline</em>.</h2>
+      <p class="lede">The pairing carries the duality without anyone having to explain it. Cormorant Garamond is elegant, high contrast and soft. Jost is geometric, even and clean. Headlines in one, everything functional in the other, and never the reverse.</p>
+
+      <div class="spec">
+        <div class="tag">Display · Cormorant Garamond · 300 / 400 · Roman and Italic</div>
+        <div class="ser">Colour, style and <em>self-care</em> in Williamsville</div>
+        <p class="note">Headlines, stylist names, pull quotes. Cormorant is light and high contrast, so it needs size and air to work. Never below 20px, and the italic carries one emphasised word rather than a whole line.</p>
+      </div>
+
+      <div class="spec">
+        <div class="tag">Interface · Jost · 200 to 500</div>
+        <div class="san">Book an appointment · Curly and textured hair · Hand-tied extensions · Balayage and dimensional colour · Wednesday to Saturday</div>
+        <p class="note">Navigation, buttons, labels, body copy, forms, captions. Jost is even in colour, which is what keeps the pages feeling clean next to the serif. Uppercase labels take 0.28em tracking. Body copy never drops below 16px, and weight 300 is for large text only.</p>
+      </div>
+
+      <div class="scale">
+        <div><span class="l">Display</span><span style="font-family:var(--serif);font-weight:300;font-size:clamp(36px,5vw,58px);line-height:1">Cormorant 300 · 58 / 0.9</span></div>
+        <div><span class="l">Section</span><span style="font-family:var(--serif);font-weight:300;font-size:clamp(28px,3.4vw,42px)">Cormorant 300 · 42 / 1.1</span></div>
+        <div><span class="l">Name</span><span style="font-family:var(--serif);font-weight:400;font-size:28px">Cormorant 400 · 28 / 1.1</span></div>
+        <div><span class="l">Lede</span><span style="font-weight:300;font-size:19px">Jost 300 · 19 / 1.8</span></div>
+        <div><span class="l">Body</span><span style="font-size:16.5px">Jost 400 · 16.5 / 1.75</span></div>
+        <div><span class="l">Label</span><span style="font-size:11px;letter-spacing:.28em;text-transform:uppercase">Jost 400 · 11 / uppercase</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sect" id="layout">
+  <div class="wrap grid">
+    <div class="rail"><span class="num">05</span><span class="lbl">Layout</span></div>
+    <div>
+      <h2 class="h2">The page alternates, <em>the way the brand does</em>.</h2>
+      <p class="lede">The single most important structural rule in the build is the band rhythm. Cream section, then ink section, then cream again, the whole way down. That is not decoration. It is the soft and industrial pairing made structural, so the page performs the brand idea rather than describing it.</p>
+
+      <div class="bands">
+        <div style="background:#EFE8DE;color:#72695F">Sand</div>
+        <div style="background:#161412;color:#A39A8F">Ink</div>
+        <div style="background:#EFE8DE;color:#72695F">Sand</div>
+        <div style="background:#161412;color:#A39A8F">Ink</div>
+        <div style="background:#EFE8DE;color:#72695F">Sand</div>
+        <div style="background:#161412;color:#A39A8F">Ink</div>
+      </div>
+      <p class="note">Two rules keep it working. Never place two ink bands next to each other, and give every band enough vertical padding that the alternation reads as deliberate rather than stripey. Dark bands carry the moments that need weight: pricing, the never-overbook promise, education, and the closing call to action.</p>
+
+      <h3 style="margin-top:56px;font-size:clamp(22px,2.4vw,28px)">Recurring devices</h3>
+      <div class="comps">
+        <div class="comp">
+          <div class="nm">The brass seal<span>Graphic device</span></div>
+          <div class="ds">The circular monogram works as a stamp on dark bands, set large and low in opacity behind content, or small and solid as a badge. Use it once per band at most. It is the only ornament the brand needs.</div>
+        </div>
+        <div class="comp">
+          <div class="nm">Italic emphasis<span>Headline pattern</span></div>
+          <div class="ds">Every section headline italicises one phrase in Cormorant: <em>a thoughtful conversation</em>, <em>the Duality team</em>, <em>have to say</em>. One phrase per headline, never two, and never a whole line. It is what makes the headings feel written rather than assembled.</div>
+        </div>
+        <div class="comp">
+          <div class="nm">Eyebrow label<span>Section marker</span></div>
+          <div class="ds">A small-caps Jost label sits above every section heading, tracked wide in stone or brass. It gives the long page structure without adding rules everywhere.</div>
+        </div>
+        <div class="comp">
+          <div class="nm">The offset card<span>Image treatment</span></div>
+          <div class="ds">A cream card overlapping the edge of a photograph, as used on the mother and daughter block. It softens a hard photo edge and is the one place the layout breaks its own grid. Keep it rare, two or three times across a page.</div>
+        </div>
+        <div class="comp">
+          <div class="nm">The price ledger<span>Pricing pattern</span></div>
+          <div class="ds">Service name left, price right, hairline between rows. No boxes, no badges, no strikethroughs. Honest pricing presented plainly is the point, and it is reinforced by the line about the stylist confirming the final price at consultation.</div>
+        </div>
+        <div class="comp">
+          <div class="nm">The step row<span>Process pattern</span></div>
+          <div class="ds">Four steps across, separated by hairlines rather than arrows or numbers in circles. Book, consultation, service, at-home care. Numbers stay small and in brass.</div>
+        </div>
+        <div class="comp">
+          <div class="nm">Full-bleed photo strip<span>Gallery pattern</span></div>
+          <div class="ds">Four images edge to edge with no gaps, running the full width. It gives the page a breath between reading sections and shows the room without a formal gallery.</div>
+        </div>
+      </div>
+
+      <div class="ledger" style="margin-top:44px">
+        <div class="y">
+          <h4>Buttons</h4>
+          <ul>
+            <li>Primary: solid ink, ivory text, no radius</li>
+            <li>Secondary: hairline outline, brass text</li>
+            <li>On ink bands: hairline outline, ivory text</li>
+            <li>Labels in Jost, tracked, sentence case</li>
+          </ul>
+        </div>
+        <div class="n">
+          <h4>Spacing</h4>
+          <ul>
+            <li>Band padding scales with viewport, never fixed</li>
+            <li>One hairline weight across the whole site</li>
+            <li>Gaps of 2px between colour blocks, not 20px</li>
+            <li>Let whitespace separate, not borders</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sect" id="photo">
+  <div class="wrap grid">
+    <div class="rail"><span class="num">06</span><span class="lbl">Photography</span></div>
+    <div>
+      <h2 class="h2">Real room, real people, <em>real light</em>.</h2>
+      <p class="lede">The room does the brand's work already. Warm cream walls and woven drum pendants set against a blacked-out ceiling and exposed ductwork, with live plants softening every corner and warm wood underfoot. That is the soft-and-industrial idea, built. Shoot it as it is, and keep the ceiling in frame on wider shots, because it is the industrial half of the palette.</p>
+      <p class="lede">The team wears <strong>all black</strong> in every photo, which reads as deliberate and should stay that way. It keeps group shots clean and lets the warm room and the hair carry the colour.</p>
+      <p class="lede">Of everything supplied, the education-class photo is the most valuable. Every stylist's bio claims ongoing training, and that one image proves it rather than stating it.</p>
+
+      <div class="ledger">
+        <div class="y">
+          <h4>Do</h4>
+          <ul>
+            <li>Shoot in the salon, in its own light</li>
+            <li>Portraits at eye level, relaxed, to camera</li>
+            <li>Hands working, tools in frame</li>
+            <li>Leave space for type to sit</li>
+            <li>Keep skin tones warm and true</li>
+          </ul>
+        </div>
+        <div class="n">
+          <h4>Don't</h4>
+          <ul>
+            <li>Heavy filters or cool blue grading</li>
+            <li>Stock imagery, even as placeholder</li>
+            <li>Tight crops with no breathing room</li>
+            <li>Busy backgrounds fighting the subject</li>
+            <li>Mixed portrait styles on one page</li>
+          </ul>
+        </div>
+      </div>
+      <p class="note">One rule for the team page: every portrait shot the same way, same distance, same background treatment. Mismatched portraits are the fastest way to make a good team look unserious.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sect" id="voice">
+  <div class="wrap grid">
+    <div class="rail"><span class="num">07</span><span class="lbl">Voice</span></div>
+    <div>
+      <h2 class="h2">Expert, warm, and never <em>salesy</em>.</h2>
+      <p class="lede">The site already has the right instinct with lines like "every great style begins with a thoughtful conversation." Keep it. Write the way Sue or Leah would talk to someone in the chair: confident about the craft, genuinely interested in the person.</p>
+
+      <div class="ledger">
+        <div class="y">
+          <h4>Sounds like Duality</h4>
+          <ul>
+            <li>"Every great style begins with a thoughtful conversation."</li>
+            <li>"We never overbook. Ever."</li>
+            <li>"We'll tell you what will actually work with your hair."</li>
+            <li>"Curly hair is its own craft, and we've trained for it."</li>
+          </ul>
+        </div>
+        <div class="n">
+          <h4>Doesn't</h4>
+          <ul>
+            <li>"Indulge in the ultimate pampering experience."</li>
+            <li>"Transform your look today!"</li>
+            <li>"Book now and save 20%."</li>
+            <li>"Our team of beauty professionals."</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sect" id="team">
+  <div class="wrap grid">
+    <div class="rail"><span class="num">08</span><span class="lbl">The Team</span></div>
+    <div>
+      <h2 class="h2">Bios for the new <em>About</em> page.</h2>
+      <p class="lede">Tightened from the copy the salon supplied, kept in their own facts and their own warmth. Sue and Leah lead, as requested. Each one closes on something personal, which is what makes a team page worth reading.</p>
+
+      <div class="team">
+        <div class="person">
+          <div class="who">
+            <div class="role">Artistic Director · Mother</div>
+            <h3>Sue Dicky</h3>
+            <div class="yrs">40 years behind the chair</div>
+          </div>
+          <div class="bio">
+            <p>Sue has spent four decades behind the chair and most of that time teaching other people how to do it well. She travelled the East Coast as a L'ANZA educator, training and inspiring stylists along the way, and she still hosts classes here at the salon.</p>
+            <p>What she values most is the clients she has known for years. Outside the salon you will find her sewing a new project or volunteering with her church's children's program.</p>
+          </div>
+        </div>
+
+        <div class="person">
+          <div class="who">
+            <div class="role">Owner &amp; Stylist · Daughter</div>
+            <h3>Leah Blachaniec</h3>
+            <div class="yrs">Behind the chair since 2013</div>
+          </div>
+          <div class="bio">
+            <p>Leah is the daughter of a lifelong stylist, so you could fairly say this is in her DNA. She grew up surrounded by the work and turned that into salon ownership, and she has spent six years building the team here.</p>
+            <p>She leads on continued education, which is how the whole salon keeps getting better. Away from work she is caring for her houseplants, tending a small summer garden, and baking.</p>
+          </div>
+        </div>
+
+        <div class="person">
+          <div class="who">
+            <div class="role">Stylist</div>
+            <h3>Amanda Pohlman</h3>
+            <div class="yrs">Almost 20 years in the industry</div>
+          </div>
+          <div class="bio">
+            <p>Amanda followed her dreams into hairstyling in her thirties and has been growing her craft ever since. She loves a polished blowout that shows off the colour and the cut underneath, and she has taken class after class to keep refining her technique alongside the rest of the team.</p>
+            <p>When she is not at the salon she is travelling with her husband or spending time with family.</p>
+          </div>
+        </div>
+
+        <div class="person">
+          <div class="who">
+            <div class="role">Stylist</div>
+            <h3>Darcy Ragione</h3>
+            <div class="yrs">Nearly 30 years in the industry</div>
+          </div>
+          <div class="bio">
+            <p>Darcy grew up watching her grandmother give perms, and that is what pulled her into hairstyling. She builds custom cuts and styles around each client rather than working from a template.</p>
+            <p>She is a regular in the classroom, sharing ideas with other stylists and bringing new techniques back to her clients, and she continues her education here at the salon. Outside work she is at the gym or with her pups.</p>
+          </div>
+        </div>
+
+        <div class="person">
+          <div class="who">
+            <div class="role">Stylist · Curls &amp; Vivids</div>
+            <h3>Marianna Campione</h3>
+            <div class="yrs">Creating hair magic since 2023</div>
+          </div>
+          <div class="bio">
+            <p>Marianna is a curly girl herself, which is exactly why clients trust her with their natural texture. She helps people stop fighting their curls and start feeling confident in them, and she loves the creative side of vivid colour.</p>
+            <p>She is deep into learning every hair type and texture there is, with more classes booked. Away from the salon she travels and gets lost in a good book.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sect" id="assets">
+  <div class="wrap grid">
+    <div class="rail"><span class="num">09</span><span class="lbl">Assets</span></div>
+    <div>
+      <h2 class="h2">What we have, what <em>needs work</em>.</h2>
+      <p class="lede">Ten photos sit in the SEO drive. Before any go on the site the filenames need fixing, because WordPress builds image URLs straight from them.</p>
+      <div class="tw">
+        <table>
+          <thead><tr><th>File in Drive</th><th>Use</th><th>Rename to</th></tr></thead>
+          <tbody>
+            <tr><td>Sue &amp; Leah #2.jpg</td><td>About hero, homepage story block</td><td><code>sue-leah-duality-salon-williamsville.jpg</code></td></tr>
+            <tr><td>Sue Dicky.jpg</td><td>Team portrait</td><td><code>sue-dicky-artistic-director.jpg</code></td></tr>
+            <tr><td>Leah Blachaniec.jpg</td><td>Team portrait</td><td><code>leah-blachaniec-owner-stylist.jpg</code></td></tr>
+            <tr><td>Amanda Pohlman.jpg</td><td>Team portrait</td><td><code>amanda-pohlman-stylist.jpg</code></td></tr>
+            <tr><td>Marianna Campione.jpg</td><td>Team portrait, colour version</td><td><code>marianna-campione-curl-specialist.jpg</code></td></tr>
+            <tr><td>Mairanna.jpg <span class="tag-fix">typo</span></td><td>Black and white duplicate. Drop it.</td><td>consolidate</td></tr>
+            <tr><td>Group picture .jpg / #2 / #3</td><td>Homepage, About, footer band</td><td><code>duality-salon-team-williamsville-ny.jpg</code></td></tr>
+            <tr><td>Staff taking an educational class.jpg</td><td>Proof for the education claim. Use prominently.</td><td><code>duality-salon-continuing-education.jpg</code></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">Every file is between 3 MB and 9 MB. Compress to roughly 200 to 400 KB before upload, and write alt text per image describing the person and the salon, not just "stylist". Darcy has no photo in the set, and the build already marks hers "coming soon".</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<div class="foot">
+  <div class="wrap">
+    Duality Salon · 1606 Hopkins Road, Williamsville, NY 14221 · (716) 998-8528 · dualitysalonbuffalo.com<br>
+    Brand guidelines prepared by Makarios Marketing.
+  </div>
+</div>
