@@ -210,7 +210,7 @@ td code{font-size:12.5px;color:var(--blue-deep)}
   body{font-size:10pt;line-height:1.6}
   .wrap{max-width:none;margin:0;padding-inline:17mm}
 
-  .sect{padding-block:17mm 15mm;break-before:page;break-inside:auto;border-top:0}
+  .sect{padding-block:17mm 0;break-before:page;break-inside:auto;border-top:0}
   .grid{grid-template-columns:1fr;gap:0}
   .rail{position:static;display:flex;align-items:baseline;gap:8mm;margin-bottom:5mm;break-after:avoid;break-inside:avoid}
   .rail .num{font-size:19pt}
@@ -236,7 +236,13 @@ td code{font-size:12.5px;color:var(--blue-deep)}
   .note{font-size:8.5pt;max-width:none}
 
   /* blocks that must stay whole */
-  .pair,.quote,.spec,.sws,.pairs,.bands,.person,.comp,.sw,.scale div,.ledger>div,.pair>div,table tr{break-inside:avoid}
+  .pair,.quote,.spec,.bands,.person,.comp,.sw,.scale div,.ledger>div,.pair>div,table tr{break-inside:avoid}
+  /* big grids flow cell by cell instead of jumping to the next sheet whole */
+  .sws,.pairs,.soc,.ui,.logos,.misuse,.nap,.comps,.ledger,.team{break-inside:auto}
+  .pairs div,.soc>div,.ui>div,.logos>div,.misuse>div,.nap .row{break-inside:avoid}
+  /* a trailing note never strands alone on a fresh sheet */
+  .note{break-before:avoid}
+  section h3{font-size:14pt!important;margin-top:9mm!important;break-after:avoid}
   .pair{margin-top:8mm;grid-template-columns:1fr 1fr}
   .pair>div{padding:7mm}
   .pair h3{font-size:14pt}
@@ -246,7 +252,7 @@ td code{font-size:12.5px;color:var(--blue-deep)}
   .ledger>div{padding:7mm}
 
   .quote p{font-size:17pt;max-width:none}
-  .sws{grid-template-columns:repeat(4,1fr);margin-top:8mm}
+  .sws{grid-template-columns:repeat(5,1fr);margin-top:8mm}
   .sw .chip{height:22mm}
   .sw .nm{font-size:13pt;margin-top:3mm}
   .sw .us{font-size:8pt}
@@ -263,14 +269,52 @@ td code{font-size:12.5px;color:var(--blue-deep)}
   .bands{margin-top:8mm;grid-template-columns:repeat(6,1fr);break-inside:avoid;break-before:avoid}
   .bands div{height:16mm}
   .comps{margin-top:8mm}
-  .comp{grid-template-columns:42mm minmax(0,1fr);gap:8mm;padding:7mm 0}
+  .comp{grid-template-columns:42mm minmax(0,1fr);gap:8mm;padding:5.2mm 0}
   .comp .nm{font-size:13pt}
   .comp .ds{font-size:9pt}
 
-  .team{margin-top:8mm}
-  .person{grid-template-columns:48mm minmax(0,1fr);gap:8mm;padding:8mm 0}
+  .team{margin-top:6mm}
+  .person{grid-template-columns:48mm minmax(0,1fr);gap:8mm;padding:3mm 0}
   .person .who h3{font-size:16pt}
   .person .bio p{font-size:9.5pt}
+
+  /* ── logo ── */
+  .logos{grid-template-columns:repeat(3,1fr);margin-top:7mm}
+  .logos>div{padding:7mm 5mm;min-height:0}
+  .logos img{max-width:40mm;margin-bottom:5mm}
+  .logos b{font-size:7.5pt}
+  .logos span{font-size:8pt;margin-top:2mm}
+  .clear{margin-top:5mm;padding:5mm}
+  .clear .box{max-width:48mm;padding:8%}
+  .misuse{grid-template-columns:repeat(5,1fr);margin-top:3mm}
+  .misuse>div{padding:3.2mm 2.5mm}
+  .misuse .fr{height:12.5mm;margin-bottom:2mm}
+  .misuse img{max-height:12.5mm}
+  .misuse p{font-size:7.5pt;line-height:1.45}
+  .misuse .x{font-size:11pt;margin-bottom:1mm}
+
+  /* ── social ── */
+  .soc{grid-template-columns:repeat(3,1fr);margin-top:7mm}
+  .soc>div{padding:6mm 5mm;min-height:0}
+  .soc b{font-size:7.5pt}
+  .soc span{font-size:8pt;margin-top:3mm}
+
+  /* ── components ── */
+  .ui{grid-template-columns:repeat(2,1fr);margin-top:7mm}
+  .ui>div{padding:6mm 5mm}
+  .ui h4{font-size:7.5pt;margin-bottom:4mm}
+  .ui p{font-size:8.5pt}
+  .ui .demo{margin-bottom:4mm;gap:3mm}
+  .btn{padding:3mm 6mm;font-size:8.5pt}
+  .fld{font-size:9pt;padding:2.5mm 0}
+
+  /* ── naming ── */
+  .nap{margin-top:7mm}
+  .nap .row{grid-template-columns:36mm minmax(0,1fr);gap:6mm;padding:3.6mm 0}
+  .nap .k{font-size:7.5pt}
+  .nap .v{font-size:9.5pt;line-height:1.55}
+  .nap .v em{font-size:8pt;margin-top:1.5mm}
+  .mono{font-size:8.5pt;padding:1px 4px}
 
   .tw{overflow:visible}
   table{min-width:0;font-size:8pt;table-layout:fixed;width:100%}
