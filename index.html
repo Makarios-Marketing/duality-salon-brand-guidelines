@@ -151,7 +151,6 @@ table{width:100%;border-collapse:collapse;font-size:14px;min-width:560px}
 th,td{text-align:left;padding:14px 18px 14px 0;border-bottom:1px solid var(--line-soft);vertical-align:top}
 th{font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--stone-2);font-weight:400;border-bottom-color:var(--line)}
 td code{font-size:12.5px;color:var(--brass-deep)}
-.tag-fix{display:inline-block;padding:2px 9px;border:1px solid var(--brass);font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--brass-deep);white-space:nowrap}
 
 .foot{background:var(--ink);color:#6E665D;font-size:12px;letter-spacing:.06em}
 .foot .wrap{padding-block:34px;border-top:1px solid rgba(255,255,255,.1)}
@@ -236,8 +235,11 @@ td code{font-size:12.5px;color:var(--brass-deep)}
   td code{font-size:7.5pt}
 
   a{color:var(--brass-deep);text-decoration:none}
-  .foot .wrap{padding-block:9mm}
-  .foot{break-before:avoid}
+  /* closing page: full ink sheet, details sitting on the bottom edge,
+     mirroring the front cover */
+  /* back cover: padding drives the height, so the ink always wraps the text */
+  .foot{break-before:page;display:block;padding-top:262mm;padding-bottom:24mm}
+  .foot .wrap{padding-block:0;margin:0;border-top:0}
 }
 </style>
 
@@ -634,7 +636,7 @@ td code{font-size:12.5px;color:var(--brass-deep)}
             <tr><td>Leah Blachaniec.jpg</td><td>Team portrait</td><td><code>leah-blachaniec-owner-stylist.jpg</code></td></tr>
             <tr><td>Amanda Pohlman.jpg</td><td>Team portrait</td><td><code>amanda-pohlman-stylist.jpg</code></td></tr>
             <tr><td>Marianna Campione.jpg</td><td>Team portrait, colour version</td><td><code>marianna-campione-curl-specialist.jpg</code></td></tr>
-            <tr><td>Mairanna.jpg <span class="tag-fix">typo</span></td><td>Black and white duplicate. Drop it.</td><td>consolidate</td></tr>
+            <tr><td>Mairanna.jpg</td><td>Black and white duplicate. Drop it.</td><td>consolidate</td></tr>
             <tr><td>Group picture .jpg / #2 / #3</td><td>Homepage, About, footer band</td><td><code>duality-salon-team-williamsville-ny.jpg</code></td></tr>
             <tr><td>Staff taking an educational class.jpg</td><td>Proof for the education claim. Use prominently.</td><td><code>duality-salon-continuing-education.jpg</code></td></tr>
           </tbody>
